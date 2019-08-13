@@ -141,6 +141,9 @@ export default class AnimateNumber extends Component {
 
     this.timer = Timer.setTimeout(() => {
 
+      if(!this.active){
+        return false
+      }
       let value = (this.endWith - this.startFrom)/this.props.steps
       let sign = value >= 0 ? 1 : -1
       if(this.props.countBy)
