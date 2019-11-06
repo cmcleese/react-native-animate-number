@@ -99,7 +99,7 @@ export default class AnimateNumber extends Component {
     clearTimeout(this.timer);
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     if(!this.active){
       return false
     }
